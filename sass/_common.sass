@@ -273,6 +273,12 @@ form
     left: -277px
     width: 134px
     height: 70px
+    &:after
+      position: absolute
+      content: ""
+      bottom: -28px
+      left: -19px
+      +s(arrow)
     p
       text-align: center
       font-family: 'conv_segoeprintregular'
@@ -321,9 +327,30 @@ form
     +box-shadow(inset 0 0 3px 1px rgb(30,30,30))
 // common blocks
 
+.button--red
+  margin-top: 35px
+  display: inline-block
+  padding: 15px 49px 0
+  border: none
+  color: #ffffff
+  +box-shadow(inset 0 -4px 0 rgba(130,0,0,.9))
+  +background-image(linear-gradient(to bottom, #e53131 0%, #bd0909 100%))
+  &:hover
+    background: lighten(#bd0909, 10%)
+    +box-shadow(0 0 0 0)
 
-
-
+.button--yellow
+  margin-top: 35px
+  font-size: 24px
+  display: inline-block
+  padding: 15px 49px 0
+  border: none
+  color: #1e1e1e
+  +box-shadow(inset 0 -4px 0 rgba(160,120,20,.4))
+  +background-image(linear-gradient(to bottom, #fff5af 0%, #ffbd00 100%))
+  &:hover
+    background: lighten(#ffbd00, 10%)
+    +box-shadow(0 0 0 0)
 
 
 

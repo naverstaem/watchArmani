@@ -125,7 +125,7 @@ header
   display: none
   height: 60px
   +box
-  background: rgba(#000, 0.8)
+  background: rgba(rgb(23,8,23), 0.8)
   .top
     height: 0
 
@@ -134,126 +134,92 @@ header
   padding-top: 50px
   padding-bottom: 70px
   +box
-  .title--black
-    font-family: 'Conv_PFDinTextCondPro-XBlack'
-    font-size: 72px
-    text-align: center
-    font-weight: normal
-    text-transform: uppercase
-    line-height: 1em
 
   .choose_in
     @extend %in
-  .choose__video-block
+    width: 880px
+    padding-top: 35px
+  .choose__block
     margin-top: -10px
     +clr
-    .choose__video-block--right
+    .choose__block--right
       float: right
-      width: 470px
-      margin-top: 160px
+      width: 490px
       p
         font-size: 18px
-        line-height: 1.5em
-      .button--wide
-        padding: 25px 58px 0
-        letter-spacing: 3px
-        display: inline-block
-        margin-top: 35px
-    .choose__video-block--left
+        margin-bottom: 28px
+
+    .choose__block--left
       float: left
-      width: 465px
-      margin-left: -20px
-      a
-        text-decoration: none
-      .video__img
+      width: 350px
+
+      .choose__img
         position: relative
         display: block
-        width: 465px
-        height: 445px
+        width: 350px
+        height: 249px
         +clr
         img
-          +border-radius(20px)
-      .video__play
-        position: relative
-        font-family: 'rosa_marenaregular'
-        font-size: 24px
-        color: #1e1e1e
-        line-height: 0.8em
-        left: 97%
-        bottom: -80px
-        z-index: 1
-        &:before
-          position: absolute
-          content: ""
-          +s(play)
-          top: 5px
-          left: -94px
-
-
-
-
-
+          display: block
 
 
 .specs
-  padding-top: 40px
+  margin-top: -40px
   padding-bottom: 80px
   +clr
   +box
   h2
-    margin-bottom: 20px
+    margin-bottom: 40px
+    font-size: 48px
   .specs_in
     @extend %in
     +clr
   &__items
     float: left
     width: 240px
-    margin-top: 20px
+    margin-top: 34px
+    font-size: 18px
+    margin-right: 60px
+    &:last-child
+      margin-right: 0
   &__item
-    display: block
-    margin-bottom: 30px
-    margin-right: 20px
-    h3
-      font-size: 24px
-      +pfl
-      color: #be0a0a
-      text-transform: uppercase
-    hr
-      height: 2px
-      +background-image(linear-gradient(to left, #ffefe5 0%, #f9d1b3 100%))
-      border: none
-      margin: 0 0 5px
-    h4
-      +pfl
-      font-size: 18px
+    color: #787878
+    border-bottom: solid 2px #dbdbdb
+    padding-top: 8px
+    padding-bottom: 3px
+    span
+      color: #1e1e1e
+    
   &__watch
     position: relative
     float: right
     margin-right: 30px
-    margin-top: 25px
     img
-      width: 380px
-      height: 390px
+      width: 290px
+      height: 475px
     .specs__text-degree
       position: absolute
-      top: 0
-      left: -55px
+      top: 40px
+      left: -70px
       width: 160px
       height: 110px
       z-index: 100
-      span
+      .text-degree
         position: relative
-        font-family: 'uni_sansheavy_caps'
+        +pfl
         font-size: 24px
         line-height: 1em
         letter-spacing: 3px
-        padding-left: 50px
+        padding-left: 0
         display: inline-block
+        text-transform: uppercase
+        span
+          font-family: 'conv_pfdintextcondpro-medium'
         &:before
           position: absolute
           content: ""
-          top: 8px
-          left: 0
+          top: 2px
+          left: -48px
           +s(360)
       p
         font-size: 14px
@@ -262,152 +228,28 @@ header
         width: 110px
     .prev
       position: absolute
-      left: -20px
-      top: 165px
+      left: -50px
+      top: 210px
       content: ""
       cursor: pointer
       +s(prev)
     .next
       position: absolute
-      right: -20px
-      top: 165px
+      right: -50px
+      top: 210px
       content: ""
       cursor: pointer
       +s(next)
-  &__small
-    float: left
-    margin-left: 20px
-    clear: both
-
-    ul
-      li
-        float: left
-        margin-right: 45px
-        position: relative
-        width: 70px
-        &:before
-          position: absolute
-          content: ""
-          top: 2px
-          left: -40px
-
-        &.first
-          &:before
-            +s(specs_ico1)
-            left: -20px
-        &.second
-          &:before
-            +s(specs_ico2)
-            left: -26px
-        &.third
-          &:before
-            +s(specs_ico3)
-            left: -26px
-        &.fourth
-          &:before
-            +s(specs_ico4)
-
-.reviews
-  h2
-    margin-bottom: 27px
-
-  .reviews_in
-    @extend %in
-  .review__item
-    +background-clip(padding-box)
-    width: 300px
-    position: relative
-    display: inline-block
-    margin-right: 45px
-    +border-radius(8px)
-    +background-clip(padding-box)
-    background-color: #efefef
-    padding: 23px 18px
-    +box
-    +clr
-    &:last-child
-      margin-right: 0
-    &:after
-      position: absolute
-      content: ""
-      bottom: -37px
-      left: 20px
-      +s(review_popup)
-
-    h3
-      color: #1e1e1e
-      +pfl
-      text-transform: uppercase
-      margin-bottom: 18px
-    p
-      +pfl
-      color: #3c3c3c
-      font-size: 16px
-
-
-.order
-  margin-top: 70px
-  .order_in
-    @extend %in
-  &__item
-    width: 300px
-    +border-radius(8px)
-    +background-clip(padding-box)
-    border: solid 2px #efefef
-    text-align: center
-    padding-top: 25px
-    padding-bottom: 40px
-    display: inline-block
-    margin-right: 45px
-    +box
-    &:last-child
-      margin-right: 0
-  &__caption
-    font-size: 24px
-    text-transform: uppercase
-    margin-bottom: 45px
-  &__img
-    margin-bottom: 15px
-  &__price
-    h3
-      +pfl
-      font-size: 18px
-      font-weight: normal
-      span
-        position: relative
-        &:after
-          position: absolute
-          content: ""
-          border-bottom: 1px solid
-          top: 10px
-          left: -2px
-          right: 0
-    h4
-      color: #be0a0a
-      font-size: 24px
-      font-family: 'conv_pfdintextcondpro-bold'
-      span
-        font-size: 18px
-        +pfl
-
-  &__form
-    margin-top: 25px
-    input
-      width: 250px
-    .button
-      padding: 0 46px
-
 
 .our
   background: url(../img/our_bg.png) center no-repeat
   +background-size(cover)
   height: 500px
-  margin-top: 65px
-  padding-top: 65px
+  margin-top: -40px
+  padding-top: 30px
   +clr
   +box
   h2
-    font-size: 36px
     color: #ffffff
   .our_in
     @extend %in
@@ -451,13 +293,120 @@ header
         vertical-align: middle
         width: 200px
 
+.order
+  margin-top: 20px
+  .order_in
+    @extend %in
+  h2
+    margin-bottom: 20px
+  &__item
+    vertical-align: top
+    width: 300px
+    +border-radius(8px)
+    +background-clip(padding-box)
+    border: solid 2px #efefef
+    text-align: center
+    padding-top: 25px
+    padding-bottom: 40px
+    display: inline-block
+    margin-right: 45px
+    +box
+    &:last-child
+      margin-right: 0
+  &__caption
+    font-size: 24px
+    text-transform: uppercase
+    margin-bottom: 45px
+  &__img
+    display: inline-block
+    margin-bottom: 15px
+    width: 180px
+    height: 280px
+    img
+      display: block
+  &__price
+    h3
+      +pfl
+      font-size: 18px
+      font-weight: normal
+      span
+        position: relative
+        &:after
+          position: absolute
+          content: ""
+          border-bottom: 1px solid
+          top: 10px
+          left: -2px
+          right: 0
+    h4
+      color: #be0a0a
+      font-size: 24px
+      font-family: 'conv_pfdintextcondpro-bold'
+      span
+        font-size: 18px
+        +pfl
+
+  &__form
+    margin-top: 25px
+    input
+      width: 250px
+    .button
+      padding: 0 68px
+
+
+.reviews
+  +clr
+  margin-top: 45px
+  h2
+    margin-bottom: 27px
+    font-size: 48px
+  .reviews_in
+    @extend %in
+    +clr
+  .review__item
+    +background-clip(padding-box)
+    width: 300px
+    position: relative
+    display: inline-block
+    margin-right: 45px
+    +border-radius(8px)
+    +background-clip(padding-box)
+    padding: 23px 18px
+    +box-shadow(inset 0 -2px 0 rgba(0,0,0,.15))
+    +background-image(linear-gradient(to bottom left, #f5f5f5 0%, #e5e5e5 100%))
+    +box
+    +clr
+    &:last-child
+      margin-right: 0
+    &:after
+      position: absolute
+      content: ""
+      bottom: -35px
+      left: 10px
+      +s(review_popup)
+
+    h3
+      color: #1e1e1e
+      font-size: 24px
+      font-family: 'bebas_neue_regularregular'
+      text-transform: uppercase
+      margin-bottom: 12px
+      font-weight: normal
+    p
+      +pfl
+      color: #3c3c3c
+      font-size: 16px
+
+
+
 
 
 
 .bottom
   @extend header
-  padding-top: 20px
-  height: 720px
+  padding-top: 80px
+  margin-top: 80px
+  height: 870px
   .logo
     margin-top: 0
 
